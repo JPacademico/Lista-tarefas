@@ -21,15 +21,17 @@ function addTarefa(){
     let li = document.createElement('LI')
     let tarefa = document.form_main.task.value
     let caixatarefa = document.createTextNode(tarefa)
+    let caixatoda = document.querySelector('.list-container')
 
+    if(tarefa == ""){
+        
+    }else{
+        caixatoda.style.display = "block"
+        li.appendChild(caixatarefa)//Texto foi criado e entra como lista
+        document.querySelector('ul').appendChild(li)//Essa lista desordenada vai receber o elemento filho
+        document.form_main.task.value = ""//Após limpa o input
+
+        botaoFechar(li); //Chama novamente a função
+    }
     
-    li.appendChild(caixatarefa)//Texto foi criado e entra como lista
-    document.querySelector('ul').appendChild(li)//Essa lista desordenada vai receber o elemento filho
-    document.form_main.task.value = ""//Após limpa o input
-
-    botaoFechar(li); //Chama novamente a função
 }
-
-const laele = document.querySelector('ul')
-
-console.log(laele)

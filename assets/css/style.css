@@ -61,6 +61,10 @@ li{
 }
 
 .checked {
-    text-decoration: line-through;
-    opacity: 0.6;
-  }
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.list-container{
+  display: none;
+}
